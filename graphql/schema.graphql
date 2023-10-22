@@ -1,0 +1,19 @@
+# defining stock types
+type Stock{
+    id: Int!
+    name: String!
+    historical_price: [Float]
+    highest_price: Float
+    lowest_price: Float
+    trade_volume: Int
+}
+
+#query types for the api
+type Query{
+    stocks: [Stock!]!
+    getStockByName(name: String!):Stock 
+    getStockById(id: Int!): Stock
+}
+
+
+
